@@ -11,3 +11,249 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  background: #1d3557;
+}
+Nav {
+  color: #fff;
+}
+.swiper {
+  margin-top: 50px;
+  height: 380px !important;
+  width: 100%;
+  background: #edf2f4;
+  padding: 20px !important;
+  border-radius: 10px;
+}
+.swiper-wrapper {
+  max-height: 300px;
+}
+.swiper-pagination {
+  bottom: 20px !important;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.product-card {
+  max-width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.image-container {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  margin: auto;
+}
+.image-container > img {
+  border-radius: inherit;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.des-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+  color: #495057;
+}
+
+.product-description {
+  color: #000;
+}
+
+.swiper-title {
+  margin-bottom: -20px;
+}
+
+
+.shop {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 500px;
+  height: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 50px auto;
+}
+
+.s-image-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: auto;
+}
+.s-image-container > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #6c757d;
+  padding: 10px;
+  margin-top: 30px !important;
+  cursor: pointer;
+}
+.image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.navbar-nav a,
+.navbar-brand a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none !important;
+}
+
+.col-3 {
+  border: 1px solid #e9ecef;
+  height: 400px;
+  cursor: pointer;
+}
+
+.col-3:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.breadcrumb-item a {
+  color: #adb5bd !important;
+}
+
+/* loader */
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 300px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1d3557;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.new-product h3 {
+
+}
+.form {
+  max-width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.home-btn {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
