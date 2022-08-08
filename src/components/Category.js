@@ -6,7 +6,7 @@ import ProductCard from './ProductCard';
 const Category = () => {
     const { id } = useParams();
     const { data: products, loading } = useFetch(`https://fakestoreapi.com/products/category/${id}`);
-    console.log(loading)
+    console.log(products)
 
     return (
         <div className='mt-5'>
@@ -14,7 +14,36 @@ const Category = () => {
                 loading ?
                 <Loader></Loader> :
                 (
-                    <div className="container">
+                    products.length !== 0 ? 
+                    (
+                        <div className="container">
+                            <div className="row justify-space-between">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <Link to="/">Home</Link>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">{id}</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div className="row mt-10">
+                                    {
+                                        products.map((product, i) => {
+                                            return (
+                                                <div className="col-3" key={i}>
+                                                    <Link to={`/shop/${product.id}`}>
+                                                        <ProductCard
+                                                        product={product}></ProductCard>
+                                                    </Link>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                            </div>
+                        </div>
+                    ) : 
+                    <div className='container'>
                         <div className="row justify-space-between">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -25,20 +54,7 @@ const Category = () => {
                                 </ol>
                             </nav>
                         </div>
-                        <div className="row mt-10">
-                                {
-                                    products.map((product, i) => {
-                                        return (
-                                            <div className="col-3" key={i}>
-                                                <Link to={`/shop/${product.id}`}>
-                                                    <ProductCard
-                                                    product={product}></ProductCard>
-                                                </Link>
-                                            </div>
-                                        )
-                                    })
-                                }
-                        </div>
+                        <p className="text-center mt-5">Sorry nothing found</p>
                     </div>
                 )
             }
