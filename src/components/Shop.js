@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import useFetch from '../utils/useFetch';
 import { ToastContainer, toast } from 'react-toastify';
-import { addToCart } from '../utils/AddToCart';
+import addToCart from '../utils/AddToCart';
 
 const Shop = () => {
     const { id } = useParams();
@@ -24,8 +24,9 @@ const Shop = () => {
         ]
     };
 
-    const handleAddToCart = () => {
-        if (addToCart(cart)) {
+    const handleAddToCart = async () => {
+        const response = await addToCart(cart);
+        if (response.status === 200) {
             notify('Product added to cart');
         } else {
             notify('Something went wrong');
