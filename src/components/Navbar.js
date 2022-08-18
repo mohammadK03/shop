@@ -18,6 +18,9 @@ function BasicExample() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav className='me-3'>
+            <Link to="/All-categories">All Categories</Link>
+          </Nav>
           {
             navs && (
               navs.map((nav, i) => {

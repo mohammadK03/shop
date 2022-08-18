@@ -257,3 +257,8 @@ a {
   transform: translateX(-50%);
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+

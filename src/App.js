@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AllCategories from './components/AllCategories';
 
 import NotFound from './components/NotFound';
 
@@ -33,6 +34,11 @@ function App() {
           <Route path='/new' element={
             <React.Suspense>
               <NewProduct />
+            </React.Suspense>
+          } />
+          <Route path='/All-Categories' element={
+            <React.Suspense>
+              <AllCategories />
             </React.Suspense>
           } />
           <Route path='*' element={
